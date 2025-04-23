@@ -37,7 +37,8 @@ def save_moviedata(movie):
         "titel": movie.get('title'),
         "jahr": movie.get('release_date'),
         "laufzeit": movie.get('runtime'),
-        "beschreibung": movie.get('overview')
+        "beschreibung": movie.get('overview'),
+        "studios": [firma["name"] for firma in movie.get('production_companies')]
     }
     download_image(
         f"https://image.tmdb.org/t/p/w1280{movie.get('backdrop_path')}",
