@@ -1,0 +1,17 @@
+meta {
+  name: search
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://api.themoviedb.org/3/search/movie?query=Bohemian Rhapsody&language=de-DE&include_adult=true
+  body: none
+  auth: inherit
+}
+
+params:query {
+  query: Bohemian Rhapsody
+  language: de-DE
+  include_adult: true
+}
