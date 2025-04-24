@@ -17,6 +17,8 @@ def zeige_und_bestaetige(daten, max_width=100):
         tabelle.append((key, value))
 
     print(tabulate(tabelle, headers=["Feld", "Wert"], tablefmt="fancy_grid"))
+    print("\nTEXT ZUM KOPIEREN:\n")
+    print(daten['beschreibung'])
 
     print("\nDrücke [Enter], um fortzufahren, oder [ESC], um abzubrechen.")
 

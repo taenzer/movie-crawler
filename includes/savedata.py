@@ -46,7 +46,7 @@ def get_trailer_url(movie_id):
     # Filter & sort
     filtered = [
         video for video in videos
-        if video["type"].lower() == "trailer" and video["official"] and video["site"].lower() == "youtube"
+        if video["type"].lower() == "trailer" and video["site"].lower() == "youtube"
     ]
     # Sort nach Datum (frühestes zuerst)
     sorted_videos = sorted(filtered, key=lambda v: datetime.fromisoformat(v["published_at"].replace("Z", "+00:00")))
